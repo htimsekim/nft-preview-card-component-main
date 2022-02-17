@@ -1,0 +1,108 @@
+:root {
+    --mobile-width: 22rem;
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background: hsl(216, 55%, 11%);
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/* this combination of body and .box centers stuff vertically */
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+.box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
+}
+
+.nftCard {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: var(--mobile-width);
+    background: hsl(214, 50%, 16%);
+    border-radius: 15px;
+    justify-content: center;
+    margin: auto;
+    box-shadow:
+        0 0 0 2rem hsl(217, 55%, 10%),
+        0 0 0 3.5rem hsl(216, 45%, 11%);
+}
+
+.nftCard h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.nftCard img {
+    border-radius: 1rem;
+}
+
+.nftCard span {
+    color: hsl(215, 51%, 70%);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.priceAndTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.price span {
+    color: hsl(178, 100%, 50%);
+    padding-left: .25rem;
+}
+
+.priceAndTime span {
+    font-size: 1.1rem;
+}
+
+.time img {
+    padding-right: .3rem;
+    min-width: 1.25rem;
+}
+
+.creator {
+    display: flex;
+    align-items: center;  
+    border-top: 1px solid hsl(215, 51%, 70%);
+}
+
+.creator img {
+    border: 2px solid white;
+    border-radius: 50%;
+    max-width: 2.5rem;
+}
+
+.creator .name {
+    color: white;
+}
+
+.creator > span {
+    padding-top: 2rem;
+    margin-left: 1rem;
+    font-size: 1.33rem;
+}
