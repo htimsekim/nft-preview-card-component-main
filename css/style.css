@@ -54,8 +54,63 @@ body {
     margin-top: 1.5rem;
 }
 
-.nftCard img {
-    border-radius: 1rem;
+.nftCard .images img {
+    border-radius: .8rem;
+    max-width: var(--mobile-width);
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    max-width: var(--mobile-width);
+}
+
+/* making this hover color work took longer than any other part of this */
+.images:hover .overlayCyan {
+    position: absolute;
+    background: rgb(0, 255, 248);
+    background: rgba(0, 255, 248, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    border-radius: .8rem;
+    opacity:.5;
+    color: white;
+    font-size: 1rem;
+    padding: 50%;
+    text-align: center;
+}
+
+img.overlay {
+    visibility: hidden;
+    max-width: var(--mobile-width);
+    position: absolute;
+}
+
+.images:hover .overlay {
+    visibility: visible;
+}
+
+.nftCard.images img:hover + img.overlay {
+    visibility: visible;
+}
+
+.crypto:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20em;
+  height: 20em;
+  background: rgba(250,140,50, 0.6);
+}
+}
+
+.crypto:hover {
+    
 }
 
 .nftCard span {
